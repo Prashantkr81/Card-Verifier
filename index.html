@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Aadhar & Card Verification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="title">Aadhar & Card <span>Verification</span></div>
+    <div class="subtitle">Verify Aadhaar & Card number checksums instantly.</div>
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="card-tab">Card Verification</button>
+        <button class="tab-btn" data-tab="aadhaar-tab">Aadhar Verification</button>
+    </div>
+
+    <div class="content">
+
+        <div id="card-tab" class="card">
+            <h2>Card Verification</h2>
+
+            <div class="field-group">
+                <div class="field-label">Card Number</div>
+                <input type="text" id="cardNumber" class="field-input" placeholder="4539 1488 0343 6467">
+            </div>
+
+            <div class="field-row">
+                <div class="field-group">
+                    <div class="field-label">Expiry</div>
+                    <input type="text" id="expiry" class="field-input" placeholder="09/29">
+                </div>
+                <div class="field-group">
+                    <div class="field-label">CVV</div>
+                    <input type="password" id="cvv" class="field-input" maxlength="4">
+                </div>
+            </div>
+
+            <button class="btn" id="checkCardBtn">Verify Card</button>
+
+            <div id="cardStatus" class="status"></div>
+
+            <div class="card-preview">
+                <div class="chip"></div>
+
+                <div class="card-number-preview" id="cardNumberPreview">
+                    •••• •••• •••• ••••
+                </div>
+
+                <div class="row">
+                    <div>
+                        <div style="font-size:0.75rem; opacity:.6;">VALID THRU</div>
+                        <div id="previewExpiry">MM/YY</div>
+                    </div>
+                    <div>
+                        <div style="font-size:0.75rem; opacity:.6;">CVV</div>
+                        <div id="previewCvv">*</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div></div>
+                    <div class="badge-wrapper">
+                        <div id="visaBadge" class="brand-pill">
+                            <img src="https://blog.logomyway.com/wp-content/uploads/2022/02/visa-logo.png">
+                        </div>
+                        <div id="mcBadge" class="brand-pill">
+                            <img src="https://logohistory.net/wp-content/uploads/2023/05/Mastercard-Logo-2016.png">
+                        </div>
+                        <div id="rupayBadge" class="brand-pill">
+                            <img src="https://i.pinimg.com/originals/0d/a5/56/0da556be226d5dc221d98b57efd9c1f6.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cardBrandHint" style="text-align:center; margin-top:6px; opacity:.7;"></div>
+
+        </div>
+
+        <div id="aadhaar-tab" class="card" style="display:none;">
+            <h2>Aadhaar Verification</h2>
+
+            <div class="field-group">
+                <div class="field-label">Aadhaar Number</div>
+                <input type="text" id="aadhaarNumber" class="field-input" placeholder="1234 5678 9123">
+            </div>
+
+            <button class="btn" id="checkAadhaarBtn">Verify Aadhaar</button>
+
+            <div id="aadhaarStatus" class="status"></div>
+        </div>
+
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
