@@ -7,7 +7,6 @@
 
 🔗 **Live Demo**  
 👉 https://cardverifier-ten.vercel.app/  
-👉 https://cardverifier-ten.vercel.app/4  
 
 ---
 
